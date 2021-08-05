@@ -1,13 +1,23 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@layer base {
+    @font-face {
+        font-family: "Inconsolata";
+        src: url(./assets/Inconsolata-Bold.ttf) format("truetype");
+    }
+    h1 {
+        @apply text-5xl mb-4 mt-4 font-headline;
+    }
+    h2 {
+        @apply text-3xl font-headline;
+    }
+    h3 {
+        @apply text-2xl font-headline;
+    }
+    p {
+        @apply text-lg;
+    }
 }
